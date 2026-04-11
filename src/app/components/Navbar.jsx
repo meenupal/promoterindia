@@ -452,7 +452,7 @@ return ( <nav className="bg-white shadow-md fixed w-full top-0 z-50"> <div class
     {/* Logo */}
     <Link href="/">
       <Image
-        src="/promoter-india.png"
+        src="/Promoter-india.png"
         width={160}
         height={120}
         alt="Logo"
