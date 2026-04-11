@@ -27,13 +27,20 @@ export default function Footer() {
             NUX
           </h1> */}
           <Link href="/">
-          <Image
+          {/* <Image
             src="/logo.png"
             width={160}
             height={120}
             alt="Logo"
             className="cursor-pointer"
-          />
+          /> */}
+           <Image
+        src="/logo.png"
+        width={160}
+        height={120}
+        alt="Logo"
+        className="h-14 w-auto"
+      />
         </Link>
 
           <div className="mb-6">
