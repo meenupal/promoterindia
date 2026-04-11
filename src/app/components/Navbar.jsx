@@ -210,6 +210,196 @@
 // }
 
 
+// "use client";
+
+// import { useState, useEffect, useRef } from "react";
+// import Link from "next/link";
+// import Image from "next/image";
+// import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
+
+// export default function Navbar() {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [dropdownOpen, setDropdownOpen] = useState(false);
+//   const dropdownRef = useRef(null);
+
+//   const toggleMobileMenu = () => {
+//     setIsOpen(!isOpen);
+//     setDropdownOpen(false);
+//   };
+
+//   const toggleDropdown = () => setDropdownOpen((prev) => !prev);
+
+//   const closeMenus = () => {
+//     setIsOpen(false);
+//     setDropdownOpen(false);
+//   };
+
+//   useEffect(() => {
+//     const handleClickOutside = (e) => {
+//       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+//         setDropdownOpen(false);
+//       }
+//     };
+//     document.addEventListener("mousedown", handleClickOutside);
+//     return () => document.removeEventListener("mousedown", handleClickOutside);
+//   }, []);
+
+//   const services = [
+//     { name: "SEO", link: "/Seo" },
+//     { name: "Public Relations", link: "/Public" },
+//     { name: "Social Media Marketing", link: "/Social" },
+//     { name: "Brand Photoshoot", link: "/Brandproduct" },
+//     { name: "Local SEO Services", link: "/Local" },
+//     { name: "Marketing", link: "/Marketing" },
+//     { name: "Brand Awareness", link: "/Brand" },
+//     { name: "Website Development", link: "/Websites" },
+//     { name: "Application Development", link: "/App" },
+//     { name: "Celebrity Endorsement", link: "/CelebrityEndorsement" },
+//   ];
+
+//   return (
+//     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
+//       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+
+//         {/* Logo */}
+//         <Link href="/">
+//           <Image
+//             src="/promoter-india.png"
+//             width={160}
+//             height={120}
+//             alt="Logo"
+//             className="h-14 w-auto"
+//           />
+//         </Link>
+
+//         {/* Mobile Toggle */}
+//         <button
+//           onClick={toggleMobileMenu}
+//           className="md:hidden text-2xl text-gray-700"
+//         >
+//           {isOpen ? <FaTimes /> : <FaBars />}
+//         </button>
+
+//         {/* Desktop Menu */}
+//         <ul className="hidden md:flex items-center space-x-8 text-gray-800 font-semibold text-lg lg:text-xl">
+
+//           <li><Link href="/">Home</Link></li>
+//           <li><Link href="/About">About Us</Link></li>
+
+//           {/* Dropdown */}
+//           <li className="relative" ref={dropdownRef}>
+//             <button
+//               onClick={toggleDropdown}
+//               className="flex items-center gap-1 hover:text-[#003C78]"
+//             >
+//               Services
+//               <FaChevronDown className={`${dropdownOpen ? "rotate-180" : ""}`} />
+//             </button>
+
+//             {dropdownOpen && (
+//               <div className="absolute top-full left-0 mt-3 bg-white shadow-xl rounded-xl w-64 z-50">
+//                 <ul className="divide-y">
+//                   {services.map((service) => (
+//                     <li key={service.name}>
+//                       <Link
+//                         href={service.link}
+//                         onClick={closeMenus}
+//                         className="block px-5 py-3 hover:bg-blue-50 hover:text-[#003C78]"
+//                       >
+//                         {service.name}
+//                       </Link>
+//                     </li>
+//                   ))}
+//                 </ul>
+//               </div>
+//             )}
+//           </li>
+
+//           <li><Link href="/industries">Blog</Link></li>
+
+//           {/* Contact Button */}
+//           <li>
+//             <Link
+//               href="/Contact2"
+//               className="  text-black px-4 py-2 rounded-lg"
+//             >
+//               Contact Us
+//             </Link>
+//           </li>
+
+//           {/* Phone Numbers */}
+//           <li className="flex gap-2">
+//             <a
+//               href="tel:+919555436528"
+//               className="bg-[#ED5808] hover:bg-[#d94f07] text-white px-3 py-2 rounded-lg text-sm"
+//             >
+//               📞 9555436528
+//             </a>
+
+//             <a
+//               href="tel:+919548833414"
+//               className="bg-[#003C78] hover:bg-[#002f5c] text-white px-3 py-2 rounded-lg text-sm"
+//             >
+//               📞 9548833414
+//             </a>
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       {isOpen && (
+//         <div className="md:hidden fixed top-16 left-0 w-full h-screen bg-white p-6">
+//           <ul className="flex flex-col space-y-4 text-lg font-medium">
+
+//             <li><Link href="/" onClick={closeMenus}>Home</Link></li>
+//             <li><Link href="/aboutus" onClick={closeMenus}>About Us</Link></li>
+
+//             <li>
+//               <button onClick={toggleDropdown} className="flex justify-between w-full">
+//                 Services <FaChevronDown />
+//               </button>
+
+//               {dropdownOpen && (
+//                 <ul className="ml-4 mt-2 space-y-2">
+//                   {services.map((service) => (
+//                     <li key={service.name}>
+//                       <Link href={service.link} onClick={closeMenus}>
+//                         {service.name}
+//                       </Link>
+//                     </li>
+//                   ))}
+//                 </ul>
+//               )}
+//             </li>
+
+//             <li><Link href="/industries" onClick={closeMenus}>Industries</Link></li>
+//             <li><Link href="/contact" onClick={closeMenus}>Contact</Link></li>
+
+//             {/* Phone Numbers Mobile */}
+//             <li className="flex flex-col gap-3 mt-4">
+//               <a
+//                 href="tel:+919555436528"
+//                 className="bg-[#ED5808] text-white px-4 py-2 rounded-lg text-center"
+//               >
+//                 📞 9555436528
+//               </a>
+
+//               <a
+//                 href="tel:+919548833414"
+//                 className="bg-[#003C78] text-white px-4 py-2 rounded-lg text-center"
+//               >
+//                 📞 9548833414
+//               </a>
+//             </li>
+//           </ul>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// }
+
+
+
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -218,184 +408,185 @@ import Image from "next/image";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+const [isOpen, setIsOpen] = useState(false);
+const [dropdownOpen, setDropdownOpen] = useState(false);
+const dropdownRef = useRef(null);
 
-  const toggleMobileMenu = () => {
-    setIsOpen(!isOpen);
-    setDropdownOpen(false);
-  };
+const toggleMobileMenu = () => {
+setIsOpen(!isOpen);
+setDropdownOpen(false);
+};
 
-  const toggleDropdown = () => setDropdownOpen((prev) => !prev);
+const toggleDropdown = () => setDropdownOpen((prev) => !prev);
 
-  const closeMenus = () => {
-    setIsOpen(false);
-    setDropdownOpen(false);
-  };
+const closeMenus = () => {
+setIsOpen(false);
+setDropdownOpen(false);
+};
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+useEffect(() => {
+const handleClickOutside = (e) => {
+if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+setDropdownOpen(false);
+}
+};
+document.addEventListener("mousedown", handleClickOutside);
+return () => document.removeEventListener("mousedown", handleClickOutside);
+}, []);
 
-  const services = [
-    { name: "SEO", link: "/Seo" },
-    { name: "Public Relations", link: "/Public" },
-    { name: "Social Media Marketing", link: "/Social" },
-    { name: "Brand Photoshoot", link: "/Brandproduct" },
-    { name: "Local SEO Services", link: "/Local" },
-    { name: "Marketing", link: "/Marketing" },
-    { name: "Brand Awareness", link: "/Brand" },
-    { name: "Website Development", link: "/Websites" },
-    { name: "Application Development", link: "/App" },
-    { name: "Celebrity Endorsement", link: "/CelebrityEndorsement" },
-  ];
+const services = [
+{ name: "SEO", link: "/Seo" },
+{ name: "Public Relations", link: "/Public" },
+{ name: "Social Media Marketing", link: "/Social" },
+{ name: "Brand Photoshoot", link: "/Brandproduct" },
+{ name: "Local SEO Services", link: "/Local" },
+{ name: "Marketing", link: "/Marketing" },
+{ name: "Brand Awareness", link: "/Brand" },
+{ name: "Website Development", link: "/Websites" },
+{ name: "Application Development", link: "/App" },
+{ name: "Celebrity Endorsement", link: "/CelebrityEndorsement" },
+];
 
-  return (
-    <nav className="bg-white shadow-md fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+return ( <nav className="bg-white shadow-md fixed w-full top-0 z-50"> <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
 
-        {/* Logo */}
-        <Link href="/">
-          <Image
-            src="/promoter-india.png"
-            width={160}
-            height={120}
-            alt="Logo"
-            className="h-14 w-auto"
-          />
-        </Link>
+```
+    {/* Logo */}
+    <Link href="/">
+      <Image
+        src="/promoter-india.png"
+        width={160}
+        height={120}
+        alt="Logo"
+        className="h-14 w-auto"
+      />
+    </Link>
 
-        {/* Mobile Toggle */}
+    {/* Mobile Toggle */}
+    <button
+      onClick={toggleMobileMenu}
+      className="md:hidden text-2xl text-gray-700"
+    >
+      {isOpen ? <FaTimes /> : <FaBars />}
+    </button>
+
+    {/* Desktop Menu */}
+    <ul className="hidden md:flex items-center space-x-8 text-gray-800 font-semibold text-lg lg:text-xl">
+
+      <li><Link href="/">Home</Link></li>
+      <li><Link href="/About">About Us</Link></li>
+
+      {/* Dropdown */}
+      <li className="relative" ref={dropdownRef}>
         <button
-          onClick={toggleMobileMenu}
-          className="md:hidden text-2xl text-gray-700"
+          onClick={toggleDropdown}
+          className="flex items-center gap-1 hover:text-[#003C78]"
         >
-          {isOpen ? <FaTimes /> : <FaBars />}
+          Services
+          <FaChevronDown className={`${dropdownOpen ? "rotate-180" : ""}`} />
         </button>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-8 text-gray-800 font-semibold text-lg lg:text-xl">
+        {dropdownOpen && (
+          <div className="absolute top-full left-0 mt-3 bg-white shadow-xl rounded-xl w-64 z-50">
+            <ul className="divide-y">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    href={service.link}
+                    onClick={closeMenus}
+                    className="block px-5 py-3 hover:bg-blue-50 hover:text-[#003C78]"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </li>
 
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/About">About Us</Link></li>
+      <li><Link href="/industries">Blog</Link></li>
 
-          {/* Dropdown */}
-          <li className="relative" ref={dropdownRef}>
-            <button
-              onClick={toggleDropdown}
-              className="flex items-center gap-1 hover:text-[#003C78]"
-            >
-              Services
-              <FaChevronDown className={`${dropdownOpen ? "rotate-180" : ""}`} />
-            </button>
+      {/* Contact Button */}
+      <li>
+        <Link
+          href="/Contact2"
+          className="text-black px-4 py-2 rounded-lg"
+        >
+          Contact Us
+        </Link>
+      </li>
 
-            {dropdownOpen && (
-              <div className="absolute top-full left-0 mt-3 bg-white shadow-xl rounded-xl w-64 z-50">
-                <ul className="divide-y">
-                  {services.map((service) => (
-                    <li key={service.name}>
-                      <Link
-                        href={service.link}
-                        onClick={closeMenus}
-                        className="block px-5 py-3 hover:bg-blue-50 hover:text-[#003C78]"
-                      >
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </li>
+      {/* Phone Numbers */}
+      <li className="flex gap-2">
+        <a
+          href="tel:+919555436528"
+          className="bg-[#ED5808] hover:bg-[#d94f07] text-white px-3 py-2 rounded-lg text-sm"
+        >
+          📞 9555436528
+        </a>
 
-          <li><Link href="/industries">Blog</Link></li>
+        <a
+          href="tel:+919548833414"
+          className="bg-[#003C78] hover:bg-[#002f5c] text-white px-3 py-2 rounded-lg text-sm"
+        >
+          📞 9548833414
+        </a>
+      </li>
+    </ul>
+  </div>
 
-          {/* Contact Button */}
-          <li>
-            <Link
-              href="/Contact2"
-              className="  text-black px-4 py-2 rounded-lg"
-            >
-              Contact Us
-            </Link>
-          </li>
+  {/* Mobile Menu */}
+  {isOpen && (
+    <div className="md:hidden fixed top-16 left-0 w-full h-screen bg-white p-6">
+      <ul className="flex flex-col space-y-4 text-lg font-medium">
 
-          {/* Phone Numbers */}
-          <li className="flex gap-2">
-            <a
-              href="tel:+919555436528"
-              className="bg-[#ED5808] hover:bg-[#d94f07] text-white px-3 py-2 rounded-lg text-sm"
-            >
-              📞 9555436528
-            </a>
+        <li><Link href="/" onClick={closeMenus}>Home</Link></li>
+        <li><Link href="/About" onClick={closeMenus}>About Us</Link></li>
 
-            <a
-              href="tel:+919548833414"
-              className="bg-[#003C78] hover:bg-[#002f5c] text-white px-3 py-2 rounded-lg text-sm"
-            >
-              📞 9548833414
-            </a>
-          </li>
-        </ul>
-      </div>
+        <li>
+          <button onClick={toggleDropdown} className="flex justify-between w-full">
+            Services <FaChevronDown />
+          </button>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden fixed top-16 left-0 w-full h-screen bg-white p-6">
-          <ul className="flex flex-col space-y-4 text-lg font-medium">
+          {dropdownOpen && (
+            <ul className="ml-4 mt-2 space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link href={service.link} onClick={closeMenus}>
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
 
-            <li><Link href="/" onClick={closeMenus}>Home</Link></li>
-            <li><Link href="/aboutus" onClick={closeMenus}>About Us</Link></li>
+        <li><Link href="/industries" onClick={closeMenus}>Industries</Link></li>
+        <li><Link href="/Contact2" onClick={closeMenus}>Contact</Link></li>
 
-            <li>
-              <button onClick={toggleDropdown} className="flex justify-between w-full">
-                Services <FaChevronDown />
-              </button>
+        {/* Phone Numbers Mobile */}
+        <li className="flex flex-col gap-3 mt-4">
+          <a
+            href="tel:+919555436528"
+            className="bg-[#ED5808] text-white px-4 py-2 rounded-lg text-center"
+          >
+            📞 9555436528
+          </a>
 
-              {dropdownOpen && (
-                <ul className="ml-4 mt-2 space-y-2">
-                  {services.map((service) => (
-                    <li key={service.name}>
-                      <Link href={service.link} onClick={closeMenus}>
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
+          <a
+            href="tel:+919548833414"
+            className="bg-[#003C78] text-white px-4 py-2 rounded-lg text-center"
+          >
+            📞 9548833414
+          </a>
+        </li>
+      </ul>
+    </div>
+  )}
+</nav>
 
-            <li><Link href="/industries" onClick={closeMenus}>Industries</Link></li>
-            <li><Link href="/contact" onClick={closeMenus}>Contact</Link></li>
 
-            {/* Phone Numbers Mobile */}
-            <li className="flex flex-col gap-3 mt-4">
-              <a
-                href="tel:+919555436528"
-                className="bg-[#ED5808] text-white px-4 py-2 rounded-lg text-center"
-              >
-                📞 9555436528
-              </a>
-
-              <a
-                href="tel:+919548833414"
-                className="bg-[#003C78] text-white px-4 py-2 rounded-lg text-center"
-              >
-                📞 9548833414
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
-    </nav>
-  );
+);
 }
 
 
