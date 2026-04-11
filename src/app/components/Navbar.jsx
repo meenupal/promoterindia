@@ -449,7 +449,6 @@ const services = [
 
 return ( <nav className="bg-white shadow-md fixed w-full top-0 z-50"> <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
 
-```
     {/* Logo */}
     <Link href="/">
       <Image
