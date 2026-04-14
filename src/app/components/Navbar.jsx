@@ -1,7 +1,4 @@
 
-
-
-
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -66,7 +63,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" onClick={closeMenus}>
           <Image
-            src="/promoter-india.png"
+            src="/logo.png"
             width={160}
             height={120}
             alt="Logo"
