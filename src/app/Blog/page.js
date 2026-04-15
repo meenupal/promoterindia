@@ -4,49 +4,49 @@ import Link from "next/link";
 import Image from "next/image";
 
 const blogPosts = [
-    {
-      id: 1,
-      title: "Trademark Registration Complete Guide",
-      slug: "trademark-registration",
-      description: "Learn how to legally protect your brand name and logo with trademark registration.",
-      image: "/trek.webp",
-    },
-    {
-      id: 2,
-      title: "MSME Registration Benefits",
-      slug: "msme-registration",
-      description: "Discover the benefits of MSME registration for small and medium-sized businesses.",
-      image: "/MSME.jpeg",
-    },
-    {
-      id: 3,
-      title: "Food License (FSSAI) Guide",
-      slug: "food-license",
-      description: "Understand why an FSSAI license is essential for starting and running a food business.",
-      image: "/food.jpg",
-    },
-    {
-      id: 4,
-      title: "What is Health Insurance?",
-      slug: "health-insurance",
-      description: "Learn how health insurance helps cover medical expenses during emergencies.",
-      image: "/health.jpg",
-    },
-    {
-      id: 5,
-      title: "Importance of Life Insurance",
-      slug: "life-insurance",
-      description: "Explore how life insurance ensures financial security for your family.",
-      image: "/life.jpg",
-    },
-    {
-      id: 6,
-      title: "Vehicle Insurance Guide",
-      slug: "vehicle-insurance",
-      description: "Understand the benefits and rules of car and bike insurance coverage.",
-      image: "/auto.jpg",
-    },
-  ];
+  {
+    id: 1,
+    title: "Trademark Registration Complete Guide",
+    slug: "trademark-registration",
+    description: "Learn how to legally protect your brand name and logo with trademark registration.",
+    image: "/trek.webp",
+  },
+  {
+    id: 2,
+    title: "MSME Registration Benefits",
+    slug: "msme-registration",
+    description: "Discover the benefits of MSME registration for small and medium-sized businesses.",
+    image: "/MSME.jpeg",
+  },
+  {
+    id: 3,
+    title: "Food License (FSSAI) Guide",
+    slug: "food-license",
+    description: "Understand why an FSSAI license is essential for starting and running a food business.",
+    image: "/food.jpg",
+  },
+  {
+    id: 4,
+    title: "What is Health Insurance?",
+    slug: "health-insurance",
+    description: "Learn how health insurance helps cover medical expenses during emergencies.",
+    image: "/health.jpg",
+  },
+  {
+    id: 5,
+    title: "Importance of Life Insurance",
+    slug: "life-insurance",
+    description: "Explore how life insurance ensures financial security for your family.",
+    image: "/life.jpg",
+  },
+  {
+    id: 6,
+    title: "Vehicle Insurance Guide",
+    slug: "vehicle-insurance",
+    description: "Understand the benefits and rules of car and bike insurance coverage.",
+    image: "/auto.jpg",
+  },
+];
 
 // const blogPosts = [
 //   {

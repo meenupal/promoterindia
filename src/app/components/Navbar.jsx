@@ -168,7 +168,12 @@ export default function Navbar() {
               )}
             </li>
 
-            <li><Link href="/industries" onClick={closeMenus}>Blog</Link></li>
+        
+
+{/* Mobile */}
+<li><Link href="/blog" onClick={closeMenus}>Blog</Link></li>
+            {/* <li><Link href="/blog" onClick={closeMenus}>Blog</Link></li> */}
+            {/* <li><Link href="/Blog" onClick={closeMenus}>Blog</Link></li> */}
             <li><Link href="/Contact2" onClick={closeMenus}>Contact Us</Link></li>
 
             {/* ✅ CONTACT BUTTONS (MOBILE) */}
