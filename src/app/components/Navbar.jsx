@@ -53,6 +53,7 @@ export default function Navbar() {
     { name: "Brand Awareness", link: "/Brand" },
     { name: "Website Development", link: "/Websites" },
     { name: "Application Development", link: "/App" },
+    { name: "BusinessServices", link: "/BusinessServices" },
     { name: "Celebrity Endorsement", link: "/CelebrityEndorsement" },
   ];
 
@@ -109,7 +110,7 @@ export default function Navbar() {
             )}
           </li>
 
-          <li><Link href="/industries">Blog</Link></li>
+          <li><Link href="/Blog">Blog</Link></li>
           <li><Link href="/Contact2">Contact Us</Link></li>
 
           {/* ✅ CONTACT BUTTONS (DESKTOP) */}

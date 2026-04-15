@@ -45,7 +45,7 @@ export default function Footer() {
 
           <div className="mb-6">
             <p className="uppercase text-xs font-semibold mb-1">24/7 Call Us</p>
-            <p className="text-gray-300 mb-4">+(528) 456-7592</p>
+            <p className="text-gray-300 mb-4">9555436528</p>
 
             <p className="uppercase text-xs font-semibold mb-1">24/7 Email Us</p>
             <p className="text-gray-300">info@example.com</p>
@@ -54,9 +54,9 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex flex-wrap gap-3">
             {[
-              { icon: <FaFacebookF />, label: 'Facebook', href: '#' },
-              { icon: <FaTwitter />, label: 'Twitter', href: '#' },
-              { icon: <FaInstagram />, label: 'Instagram', href: '#' },
+              { icon: <FaFacebookF />, label: 'Facebook', href: 'https://www.facebook.com/share/1FKzhPFC81/' },
+              { icon: <FaTwitter />, label: 'Twitter', href: '' },
+              { icon: <FaInstagram />, label: 'Instagram', href: 'https://www.instagram.com/promoter_india55?igsh=bTNqZjEyaGczdnZn' },
               { icon: <FaLinkedinIn />, label: 'LinkedIn', href: '#' },
               { icon: <FaYoutube />, label: 'YouTube', href: '#' },
             ].map(({ icon, label, href }) => (
