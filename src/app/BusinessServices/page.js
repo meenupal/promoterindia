@@ -103,7 +103,7 @@ export default function BusinessServices() {
           <div className="lg:col-span-2 space-y-8">
 
             <Image
-              src="/promo.jpg"
+              src="/servies.jpg"
               alt="Business Services"
               width={800}
               height={400}
