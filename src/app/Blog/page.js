@@ -4,49 +4,94 @@ import Link from "next/link";
 import Image from "next/image";
 
 const blogPosts = [
-  {
-    id: 1,
-    title: "Trademark Registration Complete Guide",
-    slug: "trademark-registration",
-    description: "Apne brand name aur logo ko legally protect kaise kare.",
-    image: "/trek.webp",
-  },
-  {
-    id: 2,
-    title: "MSME Registration Benefits",
-    slug: "msme-registration",
-    description: "Small business ke liye MSME registration ke fayde.",
-    image: "/MSME.jpeg",
-  },
-  {
-    id: 3,
-    title: "Food License (FSSAI) Kaise Le",
-    slug: "food-license",
-    description: "Food business ke liye license lena kyu zaroori hai.",
-    image: "/food.jpg",
-  },
-  {
-    id: 4,
-    title: "Health Insurance Kya Hai",
-    slug: "health-insurance",
-    description: "Medical emergency me insurance kaise help karta hai.",
-    image: "/health.jpg",
-  },
-  {
-    id: 5,
-    title: "Life Insurance Importance",
-    slug: "life-insurance",
-    description: "Family financial security ke liye life insurance.",
-    image: "/life.jpg",
-  },
-  {
-    id: 6,
-    title: "Vehicle Insurance Guide",
-    slug: "vehicle-insurance",
-    description: "Car ya bike insurance ke benefits aur rules.",
-    image: "/auto.jpg",
-  },
-];
+    {
+      id: 1,
+      title: "Trademark Registration Complete Guide",
+      slug: "trademark-registration",
+      description: "Learn how to legally protect your brand name and logo with trademark registration.",
+      image: "/trek.webp",
+    },
+    {
+      id: 2,
+      title: "MSME Registration Benefits",
+      slug: "msme-registration",
+      description: "Discover the benefits of MSME registration for small and medium-sized businesses.",
+      image: "/MSME.jpeg",
+    },
+    {
+      id: 3,
+      title: "Food License (FSSAI) Guide",
+      slug: "food-license",
+      description: "Understand why an FSSAI license is essential for starting and running a food business.",
+      image: "/food.jpg",
+    },
+    {
+      id: 4,
+      title: "What is Health Insurance?",
+      slug: "health-insurance",
+      description: "Learn how health insurance helps cover medical expenses during emergencies.",
+      image: "/health.jpg",
+    },
+    {
+      id: 5,
+      title: "Importance of Life Insurance",
+      slug: "life-insurance",
+      description: "Explore how life insurance ensures financial security for your family.",
+      image: "/life.jpg",
+    },
+    {
+      id: 6,
+      title: "Vehicle Insurance Guide",
+      slug: "vehicle-insurance",
+      description: "Understand the benefits and rules of car and bike insurance coverage.",
+      image: "/auto.jpg",
+    },
+  ];
+
+// const blogPosts = [
+//   {
+//     id: 1,
+//     title: "Trademark Registration Complete Guide",
+//     slug: "trademark-registration",
+//     description: "Apne brand name aur logo ko legally protect kaise kare.",
+//     image: "/trek.webp",
+//   },
+//   {
+//     id: 2,
+//     title: "MSME Registration Benefits",
+//     slug: "msme-registration",
+//     description: "Small business ke liye MSME registration ke fayde.",
+//     image: "/MSME.jpeg",
+//   },
+//   {
+//     id: 3,
+//     title: "Food License (FSSAI) Kaise Le",
+//     slug: "food-license",
+//     description: "Food business ke liye license lena kyu zaroori hai.",
+//     image: "/food.jpg",
+//   },
+//   {
+//     id: 4,
+//     title: "Health Insurance Kya Hai",
+//     slug: "health-insurance",
+//     description: "Medical emergency me insurance kaise help karta hai.",
+//     image: "/health.jpg",
+//   },
+//   {
+//     id: 5,
+//     title: "Life Insurance Importance",
+//     slug: "life-insurance",
+//     description: "Family financial security ke liye life insurance.",
+//     image: "/life.jpg",
+//   },
+//   {
+//     id: 6,
+//     title: "Vehicle Insurance Guide",
+//     slug: "vehicle-insurance",
+//     description: "Car ya bike insurance ke benefits aur rules.",
+//     image: "/auto.jpg",
+//   },
+// ];
 
 export default function Blog() {
   return (
@@ -98,9 +143,9 @@ export default function Blog() {
               </p>
 
               <Link href={`/blog/${post.slug}`}>
-                <button className="bg-[#F54A00] text-white px-4 py-2 rounded-lg">
+                {/* <button className="bg-[#F54A00] text-white px-4 py-2 rounded-lg">
                   Read More
-                </button>
+                </button> */}
               </Link>
             </div>
           </div>
