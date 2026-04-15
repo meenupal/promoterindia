@@ -57,7 +57,7 @@ export default function Footer() {
               { icon: <FaFacebookF />, label: 'Facebook', href: 'https://www.facebook.com/share/1FKzhPFC81/' },
               // { icon: <FaTwitter />, label: 'Twitter', href: '' },
               { icon: <FaInstagram />, label: 'Instagram', href: 'https://www.instagram.com/promoter_india55?igsh=bTNqZjEyaGczdnZn' },
-              // { icon: <FaLinkedinIn />, label: 'LinkedIn', href: '#' },
+              { icon: <FaLinkedinIn />, label: 'LinkedIn', href: 'https://www.linkedin.com/company/promoterindia/' },
               // { icon: <FaYoutube />, label: 'YouTube', href: '#' },
             ].map(({ icon, label, href }) => (
               <a
