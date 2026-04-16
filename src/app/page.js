@@ -8,6 +8,7 @@ import Marquee from "./components/Marquee";
 import Flipcards from "./components/Flipcards";
 import Faq from "./components/Faq";
 import Callnow from "./components/Callnow";
+import ExpoGallery from "./components/ExpoGallery";
 
 
 function page() {
@@ -18,6 +19,7 @@ function page() {
       <Marquee/>
       <About />
       <Services />
+      <ExpoGallery/>
   <chosesection/>
       <Flipcards />
       <Faq />

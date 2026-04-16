@@ -28,4 +28,18 @@ body {
 html, body {
   overflow-x: hidden;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  background: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #ff7a00;
+  color: white !important;
+}
 
