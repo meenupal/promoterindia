@@ -273,6 +273,14 @@ export default function ExpoGallery() {
     "/expo4.jpeg",
     "/expo12.jpeg",
     "/expo6.jpeg",
+    "/expo7.jpeg",
+    "/expo8.jpeg",
+    "/expo9.jpeg",
+    "/expo10.jpeg",
+    "/expo11.jpeg",
+    "/expo13.jpeg",
+    "/expo14.jpeg",
+   
   ];
 
   return (
