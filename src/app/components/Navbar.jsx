@@ -110,7 +110,7 @@ export default function Navbar() {
             )}
           </li>
 
-          <li><Link href="/Blog">Blog</Link></li>
+          <li><Link href="/blog">Blog</Link></li>
           <li><Link href="/Contact2">Contact Us</Link></li>
 
           {/* ✅ CONTACT BUTTONS (DESKTOP) */}

@@ -153,6 +153,143 @@
 
 
 
+// "use client";
+// import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+// import { FiSend } from 'react-icons/fi';
+// import { useState } from 'react';
+// import Link from 'next/link';
+// import Image from 'next/image';
+
+// export default function Footer() {
+//   const [email, setEmail] = useState('');
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     alert(`Subscribed with: ${email}`);
+//     setEmail('');
+//   };
+
+//   return (
+//     <footer className="bg-[#82361B] text-white py-16 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+      
+//       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+
+//         {/* Logo & Contact */}
+//         <div>
+//           <Link href="/">
+//             <Image
+//               src="/logo.png"
+//               width={160}
+//               height={120}
+//               alt="Logo"
+//               className="h-14 w-auto"
+//             />
+//           </Link>
+
+//           <div className="mb-8">
+//             <p className="uppercase text-xs font-semibold mb-1">Call Us</p>
+//             <p className="text-gray-300 mb-4">9555436528</p>
+
+//             <p className="uppercase text-xs font-semibold mb-1">Email Us</p>
+//             <p className="text-gray-300">info@promoterindia.com</p>
+//           </div>
+
+//           {/* Social Icons */}
+//           <div className="flex flex-wrap gap-3">
+//             <a href="https://www.facebook.com/share/1FKzhPFC81/" className="px-3 py-1.5 border border-orange-500 rounded-full text-sm hover:bg-orange-500 hover:text-black transition flex items-center gap-1">
+//               <FaFacebookF /> Facebook
+//             </a>
+
+//             <a href="https://www.instagram.com/promoter_india55" className="px-3 py-1.5 border border-orange-500 rounded-full text-sm hover:bg-orange-500 hover:text-black transition flex items-center gap-1">
+//               <FaInstagram /> Instagram
+//             </a>
+
+//             <a href="https://www.linkedin.com/company/promoterindia/" className="px-3 py-1.5 border border-orange-500 rounded-full text-sm hover:bg-orange-500 hover:text-black transition flex items-center gap-1">
+//               <FaLinkedinIn /> LinkedIn
+//             </a>
+//           </div>
+//         </div>
+
+//         {/* Quicklinks */}
+//         <div>
+//           <h3 className="text-xl font-semibold mb-5 flex items-center gap-2">
+//             <span className="text-orange-500">•</span> Quicklinks
+//           </h3>
+
+//           <ul className="space-y-3 text-gray-300">
+//             {[
+//               { name: 'About Us', link: '/about' },
+//               { name: 'Testimonials', link: '/testimonials' },
+//               { name: 'Our Team', link: '/team' },
+//               { name: 'Latest Articles', link: '/articles' },
+//               { name: 'Privacy Policy', link: '/privacy' },
+//               { name: 'Refund & Returns Policy', link: '/refund-policy' },
+//             ].map((item) => (
+//               <li key={item.name}>
+//                 <Link
+//                   href={item.link}
+//                   className="flex items-center gap-2 hover:text-orange-500 transition"
+//                 >
+//                   <span className="text-orange-500">{'›'}</span> {item.name}
+//                 </Link>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+
+//         {/* Our Services */}
+//         <div>
+//           <h3 className="text-xl font-semibold mb-5 flex items-center gap-2">
+//             <span className="text-orange-500">•</span> Our Services
+//           </h3>
+
+//           <ul className="space-y-3 text-gray-300">
+//             {[
+//               'Business Development',
+//               'Digital Marketing',
+//               'Investment Strategies',
+//               'Market Analysis',
+//               'Project Management',
+//               'Web Development',
+//             ].map((item) => (
+//               <li key={item} className="flex items-center gap-2 hover:text-orange-500 transition cursor-pointer">
+//                 <span className="text-orange-500">{'›'}</span> {item}
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+
+//         {/* Get Updates */}
+//         <div>
+//           <h3 className="text-xl font-semibold mb-5 flex items-center gap-2">
+//             <span className="text-orange-500">•</span> Get Updates
+//           </h3>
+
+//           <p className="text-gray-300 mb-6">
+//             Signup for latest news & articles. No spam guaranteed.
+//           </p>
+
+//           <form onSubmit={handleSubmit} className="flex">
+//             <input
+//               type="email"
+//               required
+//               placeholder="Email Address"
+//               value={email}
+//               onChange={(e) => setEmail(e.target.value)}
+//               className="flex-grow px-4 py-2 rounded-l-md border border-gray-700 bg-transparent text-white"
+//             />
+//             <button className="bg-orange-500 px-4 rounded-r-md">
+//               <FiSend />
+//             </button>
+//           </form>
+//         </div>
+
+//       </div>
+//     </footer>
+//   );
+// }
+
+
 "use client";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FiSend } from 'react-icons/fi';
@@ -170,9 +307,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#82361B] text-white py-16 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+    <footer className="bg-[#82361B] text-white py-16 px-6 md:px-12 lg:px-24">
       
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
 
         {/* Logo & Contact */}
         <div>
@@ -182,11 +319,11 @@ export default function Footer() {
               width={160}
               height={120}
               alt="Logo"
-              className="h-14 w-auto"
+              className="h-14 w-auto mb-6"
             />
           </Link>
 
-          <div className="mb-8">
+          <div className="mb-6">
             <p className="uppercase text-xs font-semibold mb-1">Call Us</p>
             <p className="text-gray-300 mb-4">9555436528</p>
 
@@ -218,7 +355,7 @@ export default function Footer() {
 
           <ul className="space-y-3 text-gray-300">
             {[
-              { name: 'About Us', link: '/about' },
+              { name: 'About Us', link: '/About' },
               { name: 'Testimonials', link: '/testimonials' },
               { name: 'Our Team', link: '/team' },
               { name: 'Latest Articles', link: '/articles' },
@@ -230,30 +367,8 @@ export default function Footer() {
                   href={item.link}
                   className="flex items-center gap-2 hover:text-orange-500 transition"
                 >
-                  <span className="text-orange-500">{'›'}</span> {item.name}
+                  <span className="text-orange-500">›</span> {item.name}
                 </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Our Services */}
-        <div>
-          <h3 className="text-xl font-semibold mb-5 flex items-center gap-2">
-            <span className="text-orange-500">•</span> Our Services
-          </h3>
-
-          <ul className="space-y-3 text-gray-300">
-            {[
-              'Business Development',
-              'Digital Marketing',
-              'Investment Strategies',
-              'Market Analysis',
-              'Project Management',
-              'Web Development',
-            ].map((item) => (
-              <li key={item} className="flex items-center gap-2 hover:text-orange-500 transition cursor-pointer">
-                <span className="text-orange-500">{'›'}</span> {item}
               </li>
             ))}
           </ul>
@@ -276,14 +391,19 @@ export default function Footer() {
               placeholder="Email Address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-grow px-4 py-2 rounded-l-md border border-gray-700 bg-transparent text-white"
+              className="flex-grow px-4 py-2 rounded-l-md border border-gray-700 bg-transparent text-white outline-none"
             />
-            <button className="bg-orange-500 px-4 rounded-r-md">
+            <button className="bg-orange-500 px-4 rounded-r-md hover:bg-orange-600 transition">
               <FiSend />
             </button>
           </form>
         </div>
 
+      </div>
+
+      {/* Bottom Line */}
+      <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-sm">
+        © {new Date().getFullYear()} Promoter India. All rights reserved.
       </div>
     </footer>
   );
