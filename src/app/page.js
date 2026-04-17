@@ -9,7 +9,7 @@ import Flipcards from "./components/Flipcards";
 import Faq from "./components/Faq";
 import Callnow from "./components/Callnow";
 import ExpoGallery from "./components/ExpoGallery";
-import Chosesection from "./components/Chosesection"; 
+// import Chosesection from "./components/Chosesection"; 
 
 
 function page() {
@@ -21,7 +21,7 @@ function page() {
       <About />
       <Services />
       <ExpoGallery/>
-  <Chosesection/>
+  {/* <Chosesection/> */}
       <Flipcards />
       <Faq />
       
