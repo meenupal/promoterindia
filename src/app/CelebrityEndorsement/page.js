@@ -45,13 +45,13 @@ export default function CelebrityEndorsement() {
       {/* HERO */}
       <div
         className="bg-cover bg-center h-[400px] flex items-center justify-center text-center"
-        style={{ backgroundImage: "url('/cele.jpg')" }}
+        style={{ backgroundImage: "url('/2.jpg')" }}
       >
         <div className=" p-10 rounded-xl">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-200">
             Celebrity Endorsement Services
           </h1>
-          <p className="mt-4 text-gray-700">
+          <p className="mt-4 text-gray-100">
             Build trust and boost brand visibility with powerful celebrity collaborations.
           </p>
         </div>

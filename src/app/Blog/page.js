@@ -93,7 +93,7 @@ const blogPosts = [
 //   },
 // ];
 
-export default function Blog() {
+export default function blog() {
   return (
     <div className="min-h-screen bg-gray-50">
 

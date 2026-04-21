@@ -184,13 +184,14 @@ export default function HeroSection() {
     <div className="relative w-full h-[31rem] md:h-[37rem] lg:h-[50rem]  ">
       {/* Background Video */}
       <video
-        className="absolute inset-0 object-cover w-full h-full"
-        autoPlay
-        loop
-        muted
-      >
-        <source src="/istockphoto-1019339418-640_adpp_is.mp4" type="video/mp4" />
-      </video>
+  className="absolute inset-0 w-full h-full object-cover"
+  autoPlay
+  loop
+  muted
+  playsInline
+>
+  <source src="/video.mp4" type="video/mp4" />
+</video>
 
       {/* Black Overlay */}
       <div className="absolute inset-0 bg-opacity-70"></div>
@@ -202,14 +203,16 @@ export default function HeroSection() {
         >
           {slides[currentSlide].text}
         </h1>
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
+        {/* <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
           {slides[currentSlide].description}
-        </p>
+        </p> */}
       </div>
     </div>
   
   );
 }
+
+
 
 
 

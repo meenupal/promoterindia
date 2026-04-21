@@ -307,7 +307,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#82361B] text-white py-16 px-6 md:px-12 lg:px-24">
+    <footer className="bg-[#000000d4] text-white py-16 px-6 md:px-12 lg:px-24">
       
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
 
@@ -315,9 +315,9 @@ export default function Footer() {
         <div>
           <Link href="/">
             <Image
-              src="/logo.png"
-              width={160}
-              height={120}
+              src="/logopro1.png"
+              width={200}
+              height={140}
               alt="Logo"
               className="h-14 w-auto mb-6"
             />
