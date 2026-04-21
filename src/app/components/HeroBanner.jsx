@@ -198,11 +198,11 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center  space-y-4 px-4 md:px-8 lg:px-16 pt-20">
-        <h1
+        {/* <h1
           className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold transition-all duration-5000 ${slides[currentSlide].color}`}
         >
           {slides[currentSlide].text}
-        </h1>
+        </h1> */}
         {/* <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
           {slides[currentSlide].description}
         </p> */}
