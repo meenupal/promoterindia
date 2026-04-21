@@ -194,7 +194,7 @@ export default function HeroSection() {
 </video>
 
       {/* Black Overlay */}
-      <div className="absolute inset-0 bg-opacity-70"></div>
+      {/* <div className="absolute inset-0 bg-opacity-70"></div> */}
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center  space-y-4 px-4 md:px-8 lg:px-16 pt-20">

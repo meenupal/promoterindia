@@ -315,7 +315,7 @@ export default function Footer() {
         <div>
           <Link href="/">
             <Image
-              src="/logopro1.png"
+              src="/logo.png"
               width={200}
               height={140}
               alt="Logo"
