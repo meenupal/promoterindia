@@ -190,7 +190,8 @@ export default function HeroSection() {
   muted
   playsInline
 >
-  <source src="/video.mp4" type="video/mp4" />
+
+  <source src="/video27.mp4" type="video/mp4" />
 </video>
 
       {/* Black Overlay */}
