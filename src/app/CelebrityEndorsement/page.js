@@ -45,7 +45,7 @@ export default function CelebrityEndorsement() {
       {/* HERO */}
       <div
         className="bg-cover bg-center h-[400px] flex items-center justify-center text-center"
-        style={{ backgroundImage: "url('/2.jpg')" }}
+        style={{ backgroundImage: "url('/digital16.webp')" }}
       >
         <div className=" p-10 rounded-xl">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-200">
@@ -91,7 +91,7 @@ export default function CelebrityEndorsement() {
 
             {/* IMAGE */}
             <Image
-              src="/promo.jpg"
+              src="/brend1.png"
 
               alt="Celebrity Endorsement"
               width={800}
